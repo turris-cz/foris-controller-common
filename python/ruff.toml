@@ -6,5 +6,5 @@ exclude = [
 
 target-version = "py39"
 
-[per-file-ignores]
+[lint.per-file-ignores]
 "test_*.py" = ["F811"]  # test files should have asserts
