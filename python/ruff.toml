@@ -7,4 +7,25 @@ exclude = [
 target-version = "py311"
 
 [lint.per-file-ignores]
-"test_*.py" = ["F811"]  # test files should have asserts
+"test_*.py" = [
+	"F811",  # test files should have asserts
+	"B017",  # raises with base Exception
+]
+"*.py" = [
+	"BLE001",  # Catching base  Exception
+	"DTZ003",  # using utcnow
+	"DTZ005",  # datatime without tz
+	"DTZ006",  # frometimestamp without tz
+	"DTZ007",  # strptime without %z
+	"FLY002",  # Consider f-string instead of string join
+	"ISC004",  # Unparenthesized implicit string concatenation in collection
+	"RUF012",  # mutable class attributes (used for mock backend)
+	"RUF015",  # don't prefer .next()
+	"S110",    # try-excpet-pass
+	"SIM102",  # nesting ifs
+	"SIM103",  # don't enforce return negated conditions
+	"SIM118",  # allow using keys() for dicts
+	"TRY004",  # raise ValueError instead of TypeError
+	"UP031",   # "%" in string formatters
+	"PLW1509", # `preexec_fn` argument is unsafe when using threads
+]
